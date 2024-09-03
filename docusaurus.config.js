@@ -4,23 +4,22 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import { themes as prismThemes } from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-
   title: "Learn how to interact with OpenAI models",
   tagline: "A 75-minute workshop on OpenAI GPT Models for Microsoft AI Tour",
-  url: "https://microsoft.github.io/",
-  baseUrl: "/Workshop-Interact-with-OpenAI-models/",
+  url: "https://mind-drive-technology.github.io/",
+  baseUrl: "/aiapp-lab-docs/",
 
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",
   trailingSlash: true,
 
-  organizationName: "microsoft", 
-  projectName: "Workshop-Interact-with-OpenAI-models", 
-  deploymentBranch: "gh-pages", 
+  organizationName: "insight",
+  projectName: "AI App In a Day Hackathon",
+  deploymentBranch: "gh-pages",
   favicon: "img/favicon.ico",
 
   i18n: {
@@ -36,9 +35,6 @@ const config = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl: "https://github.com/microsoft/Workshop-Interact-with-OpenAI-models/tree/main",
         },
         blog: false,
         theme: {
@@ -51,11 +47,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-
       docs: {
         sidebar: {
           hideable: false,
-          autoCollapseCategories: false
+          autoCollapseCategories: false,
         },
       },
 
@@ -67,48 +62,36 @@ const config = {
         },
         items: [
           {
-            type: 'localeDropdown',
-            position: 'right',
+            type: "localeDropdown",
+            position: "right",
           },
-        ]
+        ],
       },
 
       footer: {
         style: "dark",
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Learn how to interact with OpenAI models. Microsoft AI Tour.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Learn how to interact with OpenAI models.`,
       },
 
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-
-      /* Banner Announcements
-      announcementBar: {
-        id: 'Microsoft AI Tour',
-        content:
-          '<a href="https://github.com/microsoft/Workshop-Interact-with-OpenAI-models"><b> Star this on GitHub</b></a> ▪️ <a href="https://aka.ms/aitour"><b>Microsoft AI Tour</b></a> ',
-        backgroundColor: '#000000',
-        textColor: '#ffffff',
-        isCloseable: false,
-      },
- */
-      /* Clarity Config */
     }),
 
-    plugins: [
-      [
-        '@docusaurus/plugin-ideal-image',
-        {
-          quality: 96,
-          max: 1000, // max resized image's size.
-          min: 420, // min resized image's size. 
-          steps: 4, // #images b/w min and max (inclusive)
-          disableInDev: false,
-        },
-      ],
+  plugins: [
+    [
+      "@docusaurus/plugin-ideal-image",
+      {
+        quality: 96,
+        max: 1000, // max resized image's size.
+        min: 420, // min resized image's size.
+        steps: 4, // #images b/w min and max (inclusive)
+        disableInDev: false,
+      },
     ],
+  ],
 };
 
 module.exports = config;
